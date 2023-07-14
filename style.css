@@ -1,0 +1,88 @@
+/* reset css */
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.btn,
+button,
+button:focus,
+input:focus,
+textarea:focus,
+select,
+select:focus,
+a:focus {
+  outline: 0px !important;
+}
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+button[disabled] {
+  pointer-events: none;
+}
+input {
+  padding: 0;
+}
+input:required {
+  box-shadow: none;
+}
+input:invalid {
+  box-shadow: none;
+}
+
+/* mian css */
+body {
+  background: url(https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) center center fixed no-repeat;
+  background-size: cover;
+}
+
+
+
+/* left list css */
+
+[data-pos-delete="delete-drink"] {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  color: #999;
+  font-size: 20px;
+  line-height: 1;
+}
+
+[data-pos-delete="delete-drink"]:hover {
+  color: #333;
+  cursor: pointer;
+}
+

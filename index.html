@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>POS system</title>
+  </head>
+  <body>
+    <main class="container">
+      <h2 class="text-center pt-4">POS system</h2>
+      <div class="row">
+        <div class="col-md-4" data-order-lists>
+          <!-- left side order list -->
+          <div class="card mt-3">
+            <div class="card-body" style="min-height: 100px">
+              <div class="text-end">
+                <span href="#" data-pos-delete="delete-drink">X</span>
+              </div>
+
+              <h5 class="card-title">多多綠</h5>
+              <p class="card-text">半糖</p>
+              <p class="card-text">少冰</p>
+            </div>
+
+            <div class="card-footer">
+              <div class="card-text text-end">
+                $ <span data-drink-price>50</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Checkout button -->
+          <div class="text-end mt-4">
+            <button
+              type="button"
+              class="btn btn-success"
+              style="min-width: 120px"
+              data-pos-checkout="checkout"
+            >
+              Checkout
+            </button>
+          </div>
+        </div>
+
+        <!-- right side menu -->
+        <div class="col-md-8">
+          <section class="menu">
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-2 mt-2">
+              <!-- first -->
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">紅茶</h5>
+                    <input type="radio" name="drink" value="紅茶" />
+                  </div>
+                </div>
+              </div>
+              <!-- second -->
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">綠茶</h5>
+                    <input type="radio" name="drink" value="綠茶" />
+                  </div>
+                </div>
+              </div>
+              <!-- three -->
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">多多綠茶</h5>
+                    <input type="radio" name="drink" value="多多綠茶" />
+                  </div>
+                </div>
+              </div>
+              <!-- four -->
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">烏龍茶</h5>
+                    <input type="radio" name="drink" value="烏龍茶" />
+                  </div>
+                </div>
+              </div>
+              <!-- five -->
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">奶茶</h5>
+                    <input type="radio" name="drink" value="奶茶" />
+                  </div>
+                </div>
+              </div>
+              <!-- six -->
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">鮮橙綠</h5>
+                    <input type="radio" name="drink" value="鮮橙綠" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="ice">
+            <div class="card-group mt-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">正常冰</h5>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">少冰</h5>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">微冰</h5>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">去冰</h5>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="sugar">
+            <div class="card-group mt-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">正常糖</h5>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">少糖</h5>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">微糖</h5>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">無糖</h5>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
