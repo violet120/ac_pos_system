@@ -17,7 +17,10 @@ Drink.prototype.price = function () {
     case "檸檬綠茶":
       return 50;
     default:
-      alert("沒有此飲品");
+      Swal.fire({
+        icon: 'error',
+        text: '沒有此飲品',
+      });
   }
 };
 
@@ -81,7 +84,10 @@ addDrinkButton.addEventListener("click", function () {
   const drinkSugar = drinkPos.getDrinkValue("sugar");
 
   if (!drinkName) {
-    alert("請選擇飲品");
+    Swal.fire({
+      icon: 'error',
+      text: '請選擇飲品',
+    });
     return;
   }
 
@@ -94,7 +100,25 @@ addDrinkButton.addEventListener("click", function () {
 
 // delete order list
 DrinkPos.prototype.deletDrink = function (target) {
-  target.remove()
+  Swal.fire({
+    title: '確定刪除嗎？',
+    text: "你將無法恢復訂單",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: '確定',
+    cancelButtonText: '取消'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        '訂單刪除成功',
+        '',
+        'success'
+      )
+      target.remove()
+    }
+  })
 }
 
 
