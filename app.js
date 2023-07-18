@@ -135,6 +135,9 @@ orderLists.addEventListener("click", function (event) {
 // checkout
 const checkoutButton = document.querySelector('[data-pos-checkout="checkout"]');
 checkoutButton.addEventListener("click", function () {
+  if (!drinkPos.checkout()) {
+    return;
+  }
   Swal.fire({
     title: `總金額 $ ${drinkPos.checkout()}`,
     showCancelButton: true,
@@ -143,7 +146,7 @@ checkoutButton.addEventListener("click", function () {
   }).then((result) => {
     if (result.isConfirmed) {
       drinkPos.cleanOrderList(orderLists);
-      Swal.fire('結帳成功', '', 'success')
+      Swal.fire("結帳成功", "", "success");
     }
   });
 });
