@@ -63,14 +63,41 @@ input:invalid {
 
 /* mian css */
 body {
-  background: url(https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) center center fixed no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://images.pexels.com/photos/775031/pexels-photo-775031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) center center no-repeat;
   background-size: cover;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
 }
 
 
 
 /* left list css */
+.row {
+  max-height: 600px;
+}
 
+.order {
+  max-height: 580px;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a39f9f;
+  border-radius: 25px;
+}
+
+/* delete css */
 [data-pos-delete="delete-drink"] {
   width: 20px;
   height: 20px;
@@ -86,3 +113,8 @@ body {
   cursor: pointer;
 }
 
+/* right list css */
+
+.btn-outline-success {
+  border-style: none;
+}
