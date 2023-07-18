@@ -14,28 +14,13 @@
     <title>POS system</title>
   </head>
   <body>
-    <main class="container">
-      <h2 class="text-center pt-4">POS system</h2>
-      <div class="row">
-        <div class="col-md-4" data-order-lists>
-          <!-- left side order list -->
-          <div class="card mt-3">
-            <div class="card-body" style="min-height: 100px">
-              <div class="text-end">
-                <span href="#" data-pos-delete="delete-drink">X</span>
-              </div>
-
-              <h5 class="card-title">多多綠</h5>
-              <p class="card-text">半糖</p>
-              <p class="card-text">少冰</p>
-            </div>
-
-            <div class="card-footer">
-              <div class="card-text text-end">
-                $ <span data-drink-price>50</span>
-              </div>
-            </div>
-          </div>
+    
+    <div class="container h-100">
+      <h2 class="text-center text-light pt-2">POS system</h2>
+      <div class="row pr-2">
+        <!-- left side order list -->
+        <div class="order col-md-4 p-4" data-order-lists>
+          
 
           <!-- Checkout button -->
           <div class="text-end mt-4">
@@ -45,125 +30,124 @@
               style="min-width: 120px"
               data-pos-checkout="checkout"
             >
-              Checkout
+              結帳
             </button>
           </div>
         </div>
 
         <!-- right side menu -->
-        <div class="col-md-8">
-          <section class="menu">
-            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-2 mt-2">
-              <!-- first -->
+        <div class="col-md-8 p-4">
+          <section class="menu mb-4">
+            <div class="row row-cols-md-4 g-4">
+
               <div class="col">
-                <div class="card h-100">
+                <div class="card text-center h-100">
                   <div class="card-body">
                     <h5 class="card-title">紅茶</h5>
                     <input type="radio" name="drink" value="紅茶" />
                   </div>
                 </div>
               </div>
-              <!-- second -->
+
               <div class="col">
-                <div class="card h-100">
+                <div class="card text-center h-100">
                   <div class="card-body">
                     <h5 class="card-title">綠茶</h5>
                     <input type="radio" name="drink" value="綠茶" />
                   </div>
                 </div>
               </div>
-              <!-- three -->
+
               <div class="col">
-                <div class="card h-100">
+                <div class="card text-center h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">四季春</h5>
+                    <input type="radio" name="drink" value="四季春" />
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col">
+                <div class="card text-center h-100">
                   <div class="card-body">
                     <h5 class="card-title">多多綠茶</h5>
                     <input type="radio" name="drink" value="多多綠茶" />
                   </div>
                 </div>
               </div>
-              <!-- four -->
+
               <div class="col">
-                <div class="card h-100">
+                <div class="card text-center h-100">
                   <div class="card-body">
-                    <h5 class="card-title">烏龍茶</h5>
-                    <input type="radio" name="drink" value="烏龍茶" />
+                    <h5 class="card-title">奶蓋紅茶</h5>
+                    <input type="radio" name="drink" value="奶蓋紅茶" />
                   </div>
                 </div>
               </div>
-              <!-- five -->
+
               <div class="col">
-                <div class="card h-100">
+                <div class="card text-center h-100">
                   <div class="card-body">
-                    <h5 class="card-title">奶茶</h5>
-                    <input type="radio" name="drink" value="奶茶" />
+                    <h5 class="card-title">奶蓋綠茶</h5>
+                    <input type="radio" name="drink" value="奶蓋綠茶" />
                   </div>
                 </div>
               </div>
-              <!-- six -->
+
               <div class="col">
-                <div class="card h-100">
+                <div class="card text-center h-100">
                   <div class="card-body">
-                    <h5 class="card-title">鮮橙綠</h5>
-                    <input type="radio" name="drink" value="鮮橙綠" />
+                    <h5 class="card-title">檸檬綠茶</h5>
+                    <input type="radio" name="drink" value="檸檬綠茶" />
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="ice">
-            <div class="card-group mt-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">正常冰</h5>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">少冰</h5>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">微冰</h5>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">去冰</h5>
-                </div>
-              </div>
+          <section class="ice mb-4">
+            <h4 class="mb-2 text-light">冰塊</h4>
+            <div class="btn-group btn-group-lg" role="group" aria-label="Large radio toggle button group">
+              <input type="radio" class="btn-check" name="ice" id="normal-ice" autocomplete="off" value="正常冰" checked>
+              <label class="btn btn-light btn-outline-success" for="normal-ice">正常冰</label>
+            
+              <input type="radio" class="btn-check" name="ice" id="less-ice" autocomplete="off" value="少冰">
+              <label class="btn btn-light btn-outline-success" for="less-ice">少冰</label>
+            
+              <input type="radio" class="btn-check" name="ice" id="micro-ice" autocomplete="off" value="微冰">
+              <label class="btn btn-light btn-outline-success" for="micro-ice">微冰</label>
+
+              <input type="radio" class="btn-check" name="ice" id="no-ice" autocomplete="off" value="去冰">
+              <label class="btn btn-light btn-outline-success" for="no-ice">去冰</label>
             </div>
           </section>
 
-          <section class="sugar">
-            <div class="card-group mt-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">正常糖</h5>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">少糖</h5>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">微糖</h5>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">無糖</h5>
-                </div>
-              </div>
+          <section class="sugar mb-5">
+            <h4 class="mb-2 text-light">甜度</h4>
+            <div class="btn-group btn-group-lg" role="group" aria-label="Large radio toggle button group">
+              <input type="radio" class="btn-check" name="sugar" id="normal-sugar" autocomplete="off" value="正常糖" checked>
+              <label class="btn btn-light btn-outline-success" for="normal-sugar">正常糖</label>
+            
+              <input type="radio" class="btn-check" name="sugar" id="less-sugar" autocomplete="off" value="少糖">
+              <label class="btn btn-light btn-outline-success" for="less-sugar">少糖</label>
+            
+              <input type="radio" class="btn-check" name="sugar" id="micro-sugar" autocomplete="off" value="微糖">
+              <label class="btn btn-light btn-outline-success" for="micro-sugar">微糖</label>
+
+              <input type="radio" class="btn-check" name="sugar" id="no-sugar" autocomplete="off" value="無糖">
+              <label class="btn btn-light btn-outline-success" for="no-sugar">無糖</label>
             </div>
+          </section>
+
+          <section class="text-end">
+            <button type="button" class="btn btn-success" style="min-width: 120px" data-add-list="add-drink">新增訂單</button>
           </section>
         </div>
       </div>
-    </main>
+    </div>
 
+    <script src="/app.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
