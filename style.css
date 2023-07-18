@@ -122,3 +122,7 @@ body {
 .menu-item:hover {
   box-shadow: 0px 0px 10px rgb(244, 236, 237);
 }
+
+label {
+  cursor: pointer;
+}
